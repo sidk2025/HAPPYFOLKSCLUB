@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Happy Folks Club</title>
+    <link rel="shortcut icon" type="image/jpg" href="./static/img/logo.jpeg" />
+    <link rel="stylesheet" href="./static/styles/template.css">
+    <link rel="stylesheet" href="./static/styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav>
+        <div class="top-column">
+            <div class="logo">
+                <a href="./">
+                    <img src="./static/img/logo.jpeg" alt="Logo">
+                </a>
+            </div>
+            <div class="burger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+        <div class="navgrp">
+            <div class="nav-btn">
+                <a href="./" class="nav-btn">Home</a>
+            </div>
+            <div class="nav-btn">
+                <a href="./team" class="nav-btn">Our Team</a>
+            </div>
+            <div class="nav-btn">
+                <a href="./about" class="nav-btn">About Us</a>
+            </div>
+            <div class="nav-btn">
+
+                <a href="./events" class="nav-btn">Events</a>
+            </div>
+            <div class="nav-btn">
+                <a href="./gallery" class="nav-btn">Gallery</a>
+            </div>
+            <div class="nav-btn">
+                <a href="./contact" class="nav-btn">Contact Us</a>
+            </div>
+            <!-- Desktop Dropdown -->
+            <div class="nav-btn dropdown desktop-only">
+                <a href="#" class="nav-btn dropbtn">Get Involved</a>
+                <div class="dropdown-content">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdKuddV0fHvNAh8tl0twVjDqi8wJdADqGskdO-WviMiVzngrA/viewform">Internship Opportunities</a>
+                    <a href="./contact">Corporate Partnerships</a>
+                    <a href="./join">Join the Club</a>
+                    <a href="./join">Purchase Services</a>
+                </div>
+            </div>
+            <!-- Mobile Direct Links -->
+            <div class="mobile-only">
+                <div class="nav-btn">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdKuddV0fHvNAh8tl0twVjDqi8wJdADqGskdO-WviMiVzngrA/viewform" class="nav-btn">Internship Opportunities</a>
+                </div>
+                <div class="nav-btn">
+                    <a href="./contact" class="nav-btn">Corporate Partnerships</a>
+                </div>
+                <div class="nav-btn">
+                    <a href="./join" class="nav-btn">Join the Club</a>
+                </div>
+                <div class="nav-btn">
+                    <a href="./join" class="nav-btn">Purchase Services</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <style>
+        /* Dropdown styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #5f9e8b;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #4a8b78;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Responsive visibility */
+        @media screen and (min-width: 769px) {
+            .mobile-only {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .desktop-only {
+                display: none;
+            }
+        }
+    </style>
+
+    <div class="cover">
+        <h1>Use the Menu to Access the Home Page</h1>
+    </div>
+
+    <footer class="footer">
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social-icon">
+            <li class="social-icon__item"><a class="social-icon__link" href="https://www.facebook.com/profile.php?id=61564501870432&mibextid=LQQJ4d">
+                    <i class="fa-brands fa-facebook"></i>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="https://www.linkedin.com/company/happyfolksclub/">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="https://www.youtube.com/@HappyFolksClub">
+                    <i class="fa-brands fa-youtube"></i>
+                </a></li>
+
+            <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com/happyfolksclub?igsh=b2R0bHRoOGFvdmd0">
+                    <i class="fa-brands fa-instagram"></i>
+                </a></li>
+        </ul>
+        <ul class="menu">
+            <li class="menu__item"><a class="menu__link" href="./">Home</a></li>
+            <li class="menu__item"><a class="menu__link" href="events">Events</a></li>
+            <li class="menu__item"><a class="menu__link" href="about">About</a></li>
+            <li class="menu__item"><a class="menu__link" href="gallery">Gallery</a></li>
+            <li class="menu__item"><a class="menu__link" href="contact">Contact Us</a></li>
+            <!-- <li class="menu__item"><a class="menu__link" href="blog">Blog</a></li> -->
+
+        </ul>
+        <p>&copy;2024 Happy Folks Club | All Rights Reserved</p>
+        <br>
+        <a href="terms.php">
+            <p>Terms and Conditions</p>
+        </a>
+    </footer>
+</body>
+<script src="./static/js/main.js"></script>
+
+
+</html>
