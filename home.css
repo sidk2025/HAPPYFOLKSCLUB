@@ -1,0 +1,214 @@
+.hero {
+    background-color: var(--bgcolor);
+    width: 100%;
+    height: 86vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Ensure absolute positioning works within this section */
+}
+
+.summit-slide {
+    width: 95%;
+    height: 95%;
+    border-radius: 15px;
+    background-color: white;
+    position: relative; /* Necessary for absolute positioning of images */
+    overflow: hidden;   /* Hide any image overflow */
+}
+
+.summit-slide img {
+    width: 100%; 
+    height: 105%; 
+    margin-top: -1%;
+    border-radius: 15px;
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.summit-slide img.active {
+    opacity: 1; /* Only the active image is visible */
+}
+
+.summit-h, .summit-btn {
+    z-index: 20;
+}
+.summit-h {
+    width: 80%;
+    text-align: center;
+}
+.summit-btn {
+    box-shadow: 0px 0px 20px white;
+}
+
+.herohover {
+    position: absolute;
+    top: 40%;
+}
+
+.herohover.summit-btn {
+    top: 80%;
+}
+
+.summit-h {
+    font-size: var(--heading);
+    font-family: 'Bugaki';
+    font-weight: 200;
+    color: white;
+    text-shadow: 5px 2px 16px black;
+}
+
+
+/* Container styles */
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    height: auto;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Text section styles */
+.abt-txt {
+    padding: 4rem 3rem;
+    text-align: center;
+    line-height: 1.5rem;
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-100%); /* Start off-screen to the left */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
+}
+
+/* Image section styles */
+.side-img {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Initially hidden */
+    transform: translateX(100%); /* Start off-screen to the right */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
+}
+
+.side-img img {
+    background-color: grey;
+    width: 80%;
+}
+
+/* Animation classes */
+.slide-in-left {
+    opacity: 1;
+    transform: translateX(0); /* Move into place */
+}
+
+.slide-in-right {
+    opacity: 1;
+    transform: translateX(0); /* Move into place */
+}
+
+/* timeline */
+.timeline {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: var(--bgcolor);
+}
+.step-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin: 1rem;
+    padding: 2rem;
+}
+.step-card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+.step-card > * {
+    margin: 10px 0px;
+}
+@media (max-width:700px) {
+    .timeline{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.regi {
+    text-align: center;
+    justify-content: center;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--bgcolor-dark);
+    background-color: white;
+}
+
+.regi button {
+    margin-top: 4vh;
+}
+
+.qheading {
+    font-size: 35px;
+}
+
+.regi p {
+    font-size: 20px;
+    width: 80%;
+}
+
+.senior {
+    background-color: var(--bgcolor-dark);
+    color: white;
+}
+.senior .std-btn{
+    background-color: var(--bgcolor);
+    color: white;
+}
+
+.intern {
+    background-color: var(--bgcolor) !important;
+}
+
+@media (max-width: 768px){
+    .summit-h {
+        font-size: 35px;
+    }
+    .summit-btn {
+        width: 50%;
+    }
+    .about {
+        grid-template-columns: 1fr;
+        margin-bottom: 10%;
+        
+    }
+    .side-img{
+        margin-top: -5%;
+        overflow: hidden;
+        border-radius: 15px;
+        margin: 0px 10px;
+    }
+    .about img {
+        height: 300px;
+        width: auto;
+    }
+    .regi p{
+        font-size: 15px;
+    }
+    .regi button {
+        margin-top: 2vh;
+    }
+    .regi {
+        height: 60vh;
+    }
+    .qheading {
+        font-size:30px;
+    }
+}

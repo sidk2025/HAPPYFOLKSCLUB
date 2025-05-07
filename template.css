@@ -1,0 +1,13 @@
+.cover {
+    height:74.7vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--bgcolor-dark);
+    font-family: "Bugaki";
+    font-size: 25px;
+    background-color: var(--bgcolor);
+    padding-bottom: 10%;
+    margin-bottom: -13.7%;
+}
