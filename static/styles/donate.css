@@ -1,0 +1,237 @@
+.cover {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: var(--bgcolor-dark);
+    background-color: var(--bgcolor);
+    font-family: "Bugaki";
+    font-size: 25px;
+    /* background-color: white; */
+    padding-bottom: 10%;
+    padding-top: 110px;
+    margin-bottom: -5.7%;
+}
+.hero {
+    background-color: var(--bgcolor);
+    width: 100%;
+    height: 86vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Ensure absolute positioning works within this section */
+}
+.summit-slide {
+    width: 95%;
+    height: 95%;
+    border-radius: 15px;
+    background-color: white;
+    position: relative; /* Necessary for absolute positioning of images */
+    overflow: hidden;   /* Hide any image overflow */
+}
+.summit-slide video {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: black;
+}
+#vid-back {
+    background-color: var(--bgcolor-dark);
+}
+.viddd {
+    width: unset;
+}
+body {
+    background-color: var(--bgcolor);
+}
+.card {
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 3% 6%;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    height: 25%;
+    text-align: center;
+    min-height: 16rem;
+    width: 30%;
+}
+
+#custom {
+    color: hsl(267, 35%, 33%);
+    background-color: white;
+}
+
+.input{
+    color: var(--bgcolor-dark);  
+    cursor: auto;
+    padding: 0.8rem 1.5rem;
+    border-color: var(--bgcolor-dark);
+    border-width: 1px;
+    border-radius: 4px;
+    margin: 1rem;
+    text-align: center;
+}
+
+
+.card li, .card p {
+    font-size: 1rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+.card h2 {
+    font-family: "Bugaki";
+    font-size: 1.9rem;
+}
+.card > .std-btn {
+    margin-top: 0.75rem;
+    box-shadow: 0px 0px 2px white;
+}
+
+.card-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 5%;
+    align-items: center;
+}
+/* .card > * {
+    margin: 5%;
+} */
+#batch {
+    background-color: hsl(268, 100%, 89%);
+    color: hsl(267, 35%, 33%);
+    width: 85%;
+    border: 0.5rem solid white;
+}
+#elite {
+    background-color: hsl(267, 35%, 33%);
+    color: white;
+}
+#diamond {
+    background-color: hsl(268, 33%, 45%);
+}
+#gold {
+    background-color: hsl(268, 27%, 58%);
+    color: hsl(267, 35%, 33%);
+}
+#silver {
+    background-color: hsl(268, 34%, 58%);
+}
+#happiness {
+    background-color: hsl(268, 100%, 80%);
+    
+}
+
+.upperText {
+    width: 85%;
+    text-align: center;
+    color: hsl(268, 100%, 89%);
+    background-color: var(--bgcolor-dark);
+    border-radius: 10px;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@media(min-width: 750px){
+    .upperText{
+        flex-direction: row;
+    }
+    .left{
+        padding: 1rem 1rem;
+    }
+}
+.left{
+    padding: 1rem 2rem;
+}
+.left > h1 {
+    color: white;
+    font-family: "Bugaki";
+}
+
+.leaderboard {
+    width: 85%;
+    padding: 2%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: white;
+    margin: 3%;
+}
+
+#listtopper {
+    background-color: #e1c7ff;
+    color: #513772;
+    padding: 3%;
+    margin: 0% 3% 3% 3%;
+    justify-content: space-around;
+    align-items: space-around;
+}
+
+.listItem {
+    display: flex;
+    width: 50%;
+    background-color: var(--bgcolor);
+    border-radius: 10px;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 0.2rem;
+    padding: 0 1rem;
+}
+#listHead {
+    color: white;
+    background-color: var(--bgcolor-dark);
+    margin: 1rem;
+
+}
+.listItem > *{
+    padding: 1rem 0rem;
+}
+
+.leaderSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.upperText {
+    width: 90%;
+    margin: 5%;
+    box-sizing: border-box;
+}
+
+@media(max-width: 600px) {
+    .card-row {
+        flex-direction: column;
+        width: 100%;
+        margin: unset;
+    }
+    .card {
+        width: 90%;
+        margin: 5%;
+        min-height: 14rem;
+    }
+    .upperText > h1 {
+        font-size: 2rem;
+    }
+}
+@media(max-width: 1000px) {
+    .listItem {
+        width: 95%;
+    }
+    .leaderboard {
+        width: 95%;
+        font-size: 17px;
+    }
+}

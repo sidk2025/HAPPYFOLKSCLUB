@@ -1,0 +1,422 @@
+.hero {
+    background-color: var(--bgcolor);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribute text and slideshow */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.text-content {
+    max-width: 45%; /* Restrict the width of the text section */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    font-weight: 800;
+    font-family: 'Poppins';
+}
+
+.summit-h {
+    font-size: var(--heading);
+    font-family: 'Bugaki';
+    font-weight: 200;
+    color: white;
+    line-height: 1.2em;
+    text-shadow: 5px 2px 16px black;
+}
+
+.summit-sub {
+    font-size: 1.2em;
+    font-family: 'Bugaki';
+    color: white;
+    line-height: 2.0rem;
+    font-weight: 500;
+    text-shadow: 5px 2px 15px black;
+    margin-top: 10px;
+}
+
+.button-group {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* Allow buttons to stack on smaller screens */
+}
+
+.summit-btn {
+    height: 3.25rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--bgcolor-dark);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0 20px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    /* box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5); */
+    text-decoration: none;
+}
+
+.summit-btn a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.summit-slide {
+    width: 50%;
+    min-height: 55vh;
+    border-radius: 15px;
+    background-color: var(--bgcolor);
+    position: relative;
+    overflow: hidden;
+}
+
+.summit-slide img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    position: absolute;
+    object-fit: cover; /* Ensures the entire image is visible */
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+
+.summit-slide img.active {
+    opacity: 1; /* Only the active image is visible */
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column; /* Stack text and slideshow */
+        justify-content: center;
+    }
+
+    .text-content {
+        max-width: 100%; /* Use full width for smaller screens */
+        text-align: center;
+    }
+
+    .summit-slide {
+        width: 100%; /* Use full width for smaller screens */
+        margin-top: 20px;
+    }
+
+    .button-group {
+        justify-content: center; /* Center buttons on smaller screens */
+    }
+}
+
+/* Container styles */
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    height: auto;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Text section styles */
+.abt-txt {
+    padding: 4rem 3rem;
+    text-align: center;
+    line-height: 1.5rem;
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-100%); /* Start off-screen to the left */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
+}
+
+/* Image section styles */
+.side-img {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Initially hidden */
+    transform: translateX(100%); /* Start off-screen to the right */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
+}
+
+.side-img img {
+    background-color: grey;
+    width: 80%;
+}
+
+/* Animation classes */
+.slide-in-left {
+    opacity: 1;
+    transform: translateX(0); /* Move into place */
+}
+
+.slide-in-right {
+    opacity: 1;
+    transform: translateX(0); /* Move into place */
+}
+/* stats */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: var(--bgcolor-dark);
+}
+.stat-card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 10px 10px;
+    padding: 10px;
+}
+.stat-card > * {
+    margin: 0.5rem;
+}
+
+@media(max-width: 1000px) {
+    .stats {
+        flex-wrap: wrap;
+    }
+}
+
+
+
+/* timeline */
+.timeline {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: var(--bgcolor);
+}
+.step-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin: 1rem;
+    padding: 2rem;
+    text-align: center;
+}
+.step-card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+.step-card > * {
+    margin: 10px 0px;
+}
+@media(max-width:1200px) {
+    .timeline{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width:700px) {
+    .timeline{
+        grid-template-columns: 1fr;
+    }
+}
+
+#perks{
+    background-color: white; margin-top: -8rem; padding: 0px 2rem;
+background-color: white; margin-top: -8rem; padding: 0px 2rem;
+}
+
+.summit-slide .perkimg{
+    opacity: 1; 
+    transition: unset; 
+    background-color: white;
+    object-fit: contain;
+}
+
+@media(max-width:700px) {
+    #perks{
+        margin: 0px;
+    }
+    .perkimg {
+        padding: 0%;
+    }
+    .perk-rev {
+        flex-direction: column-reverse;
+    }
+}
+
+
+.regi {
+    text-align: center;
+    justify-content: center;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--bgcolor-dark);
+    background-color: var(--bgcolor);
+}
+
+.regi button {
+    margin-top: 4vh;
+    background-color: var(--bgcolor-dark);
+}
+
+.qheading {
+    font-size: 35px;
+}
+
+.regi p {
+    font-size: 20px;
+    width: 80%;
+}
+
+.senior {
+    background-color: var(--bgcolor-dark);
+    color: white;
+}
+.senior .std-btn{
+    background-color: var(--bgcolor);
+    color: white;
+}
+#home-faq {
+    background-color: white;
+}
+#home-faq > button {
+    background-color: var(--bgcolor-dark);
+}
+.read-faq {
+    margin: 0px 10px;
+    background-color: var(--bgcolor) !important;
+}
+.backkk {
+    color: white;
+}
+
+@media (max-width: 768px){
+    .summit-h {
+        font-size: 35px;
+    }
+    .summit-btn {
+        width: 50%;
+    }
+    .about {
+        grid-template-columns: 1fr;
+        margin-bottom: 10%;
+        
+    }
+    .side-img{
+        margin-top: -5%;
+        overflow: hidden;
+        border-radius: 15px;
+        display: none;
+        margin: 0px 10px;
+    }
+    .about img {
+        height: 300px;
+        width: auto;
+    }
+    .regi p{
+        font-size: 15px;
+    }
+    .regi button {
+        margin-top: 2vh;
+    }
+    .regi {
+        height: 60vh;
+    }
+    .qheading {
+        font-size:30px;
+    }
+}
+
+.sikhandhar {
+    padding: 1rem;
+    background-image: url('../img/sikhandhar.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+}
+
+.content {
+    background-color: var(--bgcolor);
+    text-align: center;
+    padding-top: 110px;
+    
+}
+
+.moana-hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-image: url('../img/summit-poster.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    min-height: 90vh;
+}
+
+.moana-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    z-index: 1;
+}
+
+.moana-hero > * {
+    position: relative; /* Ensure content appears above the overlay */
+    z-index: 2;
+}
+
+@media (max-width: 900px) {
+    .moana-hero {
+        padding-top: 5rem;
+        background-size: cover; /* Changed to cover for better fit */
+        min-height: 100vh;
+    }
+}
+
+.rem {
+    background-color: rgba(255, 255, 255, 0.75);
+    color: black;
+    padding: 1.5rem;
+    font-size: 4.5rem;
+    border-radius: 1.5rem;
+    margin: 2rem;
+}
+
+#rzp-btn {
+    width: 250px;
+    background-color: #d9a3ff;
+    color: black;
+    font-weight: 700;
+    height: auto;
+    padding: 20px;
+    border-radius: 2rem;
+}
+
+.moana-title {
+    text-align: center;
+}
+
+.moana-title > h1 {
+    font-size: 3rem;
+}
+
